@@ -21,6 +21,12 @@ PROCESS_LIST  *generateRandomJobs(int count)
 	return job_queue;
 }
 
+int freeInfo(int **info , int numberOfJobs)
+{
+	for(int i=0; i< numberOfJobs ; i++)
+		free(info[i]);
+	free(info);	
+}
 
 int displayAccountingInfo(int **info, int jobs , int timeUnit)
 {
@@ -135,6 +141,6 @@ int main()
 
 
 	// deleting all accounting info and job qeues
-	free(info);	
+	freeInfo(info, numberOfJobs);	
 	deleteProcessList(&job_queue);
 }

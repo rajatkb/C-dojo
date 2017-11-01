@@ -19,3 +19,6 @@
   Nothing much. Just class assignment in C. It schedules many producer and consumer threads at once and runs them all for specified time
   
   $ ./demo execution_time producer_thread_count consumer_thread_count
+
+# 5. BATMAN : Bidrectional Autonomous Trolley Manager
+  This one is a poorly implemented variant of the problem. Reason being. There is no deadlock resolution mechanism. And I have simply       assumed there is a deadlock when all the trolleys are entering at once. Also, the problem statement describes that there must be only     one BAT thread executing or crossing at a time. But why ? The image provided gives a different story all together. NO IDEA !!! If some     one out there can help me in deadlock identification and a resolution routine please do. The current implementation also does not uses     the right first notion for all threads, will implement it soon. 
